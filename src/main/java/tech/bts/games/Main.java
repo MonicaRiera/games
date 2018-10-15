@@ -9,8 +9,11 @@ public class Main {
         Game g1 = new Game("Chess", 2, 20);
         Game g2 = new Game("Domino", 2, 10);
         Game g3 = new Game("Parchis", 4, 15);
+        Game g4 = new Game("Candy Crush", 1, 0);
+        Game g5 = new Game("Bridge", 4, 5);
+        Game g6 = new Game("Srcabble", 4, 10);
 
-        List<Game> games = Arrays.asList(g1, g2, g3);
+        List<Game> games = Arrays.asList(g1, g2, g3, g4, g5, g6);
 
         int columnWidth = 15;
 
