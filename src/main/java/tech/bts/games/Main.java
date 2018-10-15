@@ -12,9 +12,28 @@ public class Main {
 
         List<Game> games = Arrays.asList(g1, g2, g3);
 
+        int columnWidth = 15;
+
+        String header = StringUtil.padRight("| Game", columnWidth)
+                + StringUtil.padRight("| Players", columnWidth)
+                + StringUtil.padRight("| Price", columnWidth) + "|";
+
+        String separator = StringUtil.repeat("-", columnWidth)
+                + StringUtil.repeat("-", columnWidth)
+                + StringUtil.repeat("-", columnWidth + 1);
+
+        System.out.println(separator);
+        System.out.println(header);
+        System.out.println(separator);
+
         for (Game game : games) {
-            System.out.println(game.getName() + ", " + game.getNumPlayers() + " players, " + game.getPrice() + " euros");
+            System.out.println(StringUtil.padRight("| " + game.getName(), columnWidth)
+                    + StringUtil.padRight("| " + Integer.toString(game.getNumPlayers()), columnWidth)
+                    + StringUtil.padRight("| " + Double.toString(game.getPrice()), columnWidth) + "|");
         }
+
+        System.out.println(separator);
+
 
     }
 }
